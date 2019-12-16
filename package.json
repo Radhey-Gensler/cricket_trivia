@@ -1,0 +1,43 @@
+{
+  "name": "cricket_trivia",
+  "version": "1.0.0",
+  "description": "web app(questions on cricket)",
+  "main": "index.js",
+  "scripts": {
+    "webpack-dev-server": "webpack-dev-server",
+    "dev": "webpack-dev-server --mode=development",
+    "prod": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radhey-Gensler/cricket_trivia.git"
+  },
+  "keywords": [
+    "cricket"
+  ],
+  "author": "Radhey Reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Radhey-Gensler/cricket_trivia/issues"
+  },
+  "homepage": "https://github.com/Radhey-Gensler/cricket_trivia#readme",
+  "dependencies": {
+    "css-loader": "^3.3.2",
+    "file-loader": "^5.0.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "style-loader": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
