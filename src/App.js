@@ -6,9 +6,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
         <Quiz />
-        <Footer />
       </React.Fragment>
     );
   }
