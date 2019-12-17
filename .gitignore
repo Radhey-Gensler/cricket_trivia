@@ -7,3 +7,5 @@ public/dist/
 .DS_Store
 
 src/.DS_Store
+
+dist/
