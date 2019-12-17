@@ -1,25 +1,31 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const http = require('http');
-const https = require('https');
-let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 8080;
-  }
-
-app.use(express.urlencoded({extended: false}));
-/* app.listen(PORT,()=>{
-    console.log('listening on port',PORT);
-}); */
-console.log(__dirname, path.join(__dirname,'dist'))
-app.use(express.static(path.join(__dirname,'dist')));
+var express = require('express'),
+    http = require('http'),
+    https = require('https'),
+    path = require('path'),
+    httpApp = express(),
+    app = express(),
+    fs = require('fs');
 
 
-/* http.get('*', function(req, res) {  
-    res.redirect('https://' + req.headers.host + req.url);
-}) */
+var httpsOptions = {
+    key: fs.readFileSync('./key.pem'),
+    cert: fs.readFileSync('./cert.pem')
+};
+httpApp.set('port', process.env.PORT || 80);
+httpApp.get("*", function (req, res, next) {
+    res.redirect("https://" + req.headers.host + "/" + req.path);
+});
 
-https.createServer(app,(req,res)=>{
+// all environments
+app.set('port', process.env.PORT || 443);
+app.enable('trust proxy');
+app.use(express.static(path.join(__dirname, 'dist')));
 
-}).listen(port,()=> console.log("listening on port",port));
+
+http.createServer(httpApp).listen(httpApp.get('port'), function() {
+    console.log('Express HTTP server listening on port ' + httpApp.get('port'));
+});
+
+https.createServer(httpsOptions, app).listen(app.get('port'), function() {
+    console.log('Express HTTPS server listening on port ' + app.get('port'));
+});
