@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import "./Results.css";
+import BarChart from "../Chart/Chart";
 class Results extends Component {
   render() {
     return (
       <div className="main-container">
         <div className="results-holder">
-          <button className="close-btn pull-right" onClick={this.props.closeResults}>X</button>
+          <button
+            className="close-btn pull-right"
+            onClick={this.props.closeResults}
+          >
+            X
+          </button>
           <div className="results">
-          <div >
-            <label>Correct</label>
-            <span>{this.props.results.correct}</span>
-          </div>
-          <div>
-            <label>Incorrect</label>
-            <span>{this.props.results.incorrect}</span>
-          </div>
+            <BarChart results={this.props.results} />
           </div>
         </div>
       </div>
