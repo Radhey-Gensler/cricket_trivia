@@ -1,0 +1,174 @@
+.searchbox-main-container {
+    width: 270px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: 30%
+  }
+  
+  .searchbox-main-container .selectValue-container {
+    width: 100%;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    height: 30px;
+    line-height: 30px;
+    color: #444444;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .searchbox-main-container .selected-value {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .searchbox-main-container .placeHolder-value {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 80%;
+    color: gray;
+  }
+  
+  .searchbox-main-container .aside-container {
+    height: 30px;
+    float: right;
+    position: relative;
+  }
+  
+  .searchbox-main-container .dropdown-box{
+    display: inline-block;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    opacity: 0.4;
+  }
+  
+  .searchbox-main-container .dropdown-box:hover{
+    opacity: 1;
+  }
+  
+  .searchbox-main-container .dropdown-box-open{
+    display: inline-block;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    opacity: 0.4; 
+  }
+  
+  .searchbox-main-container .selectValue-container .clear-icon{
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url(../../css/icons/delete.svg);
+    opacity: 0.5;
+  }
+  .searchbox-main-container .selectValue-container .clear-icon:hover{
+    opacity: 1;
+  }
+  
+  .searchbox-main-container .selectValue-container .dropdown-arrow {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../css/icons/arrow-down.svg);
+    cursor: pointer;
+  }
+  .searchbox-main-container .dropdown-container{
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    background: #ffffff;
+    color: #222222;
+    border: none;
+    z-index: 10000;
+    box-shadow: 0 3px 8px rgba(34, 34, 34, .5);
+    position: absolute;
+    line-height: 18px;
+    font-size: 13px;
+    padding: 8px 0px;
+  }
+  
+  .searchbox-main-container .dropdown-container .search-box{
+    z-index: 10000;
+    white-space: nowrap;
+    display: inline-block;
+    min-height: 26px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  
+  
+  .searchbox-main-container .dropdown-container .search-box .search-field{
+    border: 1px solid #aaa;
+    min-height: 25px;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 5px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0px 8px;
+    width: calc(100% - 16px);
+    padding: 0px 32px 0px 8px;
+  }
+  
+  .searchbox-main-container .dropdown-container .result-listItems {
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 200px;
+  }
+  
+  .searchbox-main-container .result-listItems li {
+    list-style: none;
+    display: list-item;
+  }
+  .searchbox-main-container .result-listItems .li-highlighted {
+  color: #222222;
+  background: #eee;
+  }
+  .searchbox-main-container .result-listItems .li-result-label {
+    padding: 4px 10px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .search-field:focus {
+    border: 1px solid #faa634 !important;
+    box-shadow: none !important;
+  }
+  input:focus{
+    outline: none;
+  }
+  
+  .ul-list-wrapper{
+    outline: none;
+  }
+  .searchbox-main-container .loading-icon{
+    width: 20px;
+    float: left;
+    height: 20px;
+    padding: 5px;
+  }
+  .searchbox-main-container .loading-text{
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px;
+    color: #666666;
+    font-family: Kievit;
+  }

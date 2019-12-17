@@ -1,0 +1,77 @@
+.btn:link,
+.btn:visited {
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 10px;
+  transition: all .2s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+.btn{
+    margin: 10px;
+}
+.btn-submit{
+    background-color: rgba(87, 245, 81, 0.933);
+    color: #ffffff
+}
+
+.btn-reset{
+    background-color: rgba(240, 50, 50, 0.933);
+    color: #ffffff
+}
+.question-container{
+    cursor: pointer;
+    margin-bottom: 10px;
+    background: #eeeeee;
+    border-radius: 10px;
+}
+.question-container:hover{
+    transition: all .2s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+.highlight-error{
+    background: red !important;
+}
+.quiz-container{
+    width: 980px;
+    top: 20%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -10%);
+    text-align: center;
+}
+
+.question{
+    width: auto;
+    height: 40px;
+    background: #f0a148;;
+    color: white;
+    font-style: normal;
+    line-height: 2rem;
+    border-radius: 10px;
+}
+
+.options-container{
+    height: 70px;
+}
+
+*{
+    font-family: sans-serif;
+}
+
+.error{
+    height: 40px;
+    color: red;
+}
