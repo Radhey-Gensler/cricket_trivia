@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "web app(questions on cricket)",
   "main": "index.js",
+  "engines":{
+    "npm":"6.12.1",
+    "node":"12.13.1"
+  },
   "scripts": {
     "webpack-dev-server": "webpack-dev-server",
     "dev": "webpack-dev-server --mode=development",
-    "prod": "webpack --mode=production && node server.js"
+    "prod": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
